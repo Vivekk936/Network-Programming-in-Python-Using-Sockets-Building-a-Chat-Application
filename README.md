@@ -283,10 +283,108 @@ client_socket.connect((HOST, PORT))
 
 ---
 
-##  Sending Messages
+ Sending Messages
 
 Messages are converted into bytes before being sent through the socket:
 
-```python
 socket.send(message.encode("utf-8"))
+
+The receiver converts the bytes back into a string:
+
+message.decode("utf-8")
+
+The communication process is:
+
+String
+  ↓
+encode()
+  ↓
+Bytes
+  ↓
+Socket
+  ↓
+Network
+  ↓
+Socket
+  ↓
+decode()
+  ↓
+String
+ Project Features
+ TCP socket communication
+ Client-server architecture
+ Python networking
+ Tkinter GUI
+ Send messages
+ Receive messages
+ Object-oriented structure
+ Separate client and server modules
+ Virtual environment support
+ Learning Objectives
+
+After completing this project, you can understand:
+
+What computer sockets are
+How TCP communication works
+How a server accepts connections
+How a client connects to a server
+How data is sent through sockets
+How data is encoded and decoded
+How to create a GUI using Tkinter
+How multiple Python modules work together
+How to build a basic network application
+ Future Improvements
+
+The project can be extended with:
+
+ Multiple clients
+ Real-time messaging
+ User authentication
+ Encrypted communication
+ Online/offline status
+ File sharing
+ Image sharing
+ Message history
+ Usernames
+ Communication between different computers
+ Improved chat interface
+ Limitations
+
+This is a basic educational project designed to demonstrate socket programming.
+
+The current implementation is not intended to be a production-ready messaging application.
+
+For a production chat application, additional features such as authentication, encryption, multiple-client handling, error handling, and secure communication would be required.
+
+ What I Learned
+
+Through this project, I learned how to:
+
+Python
+  │
+  ├── Socket Programming
+  │       │
+  │       ├── Server
+  │       └── Client
+  │
+  ├── TCP/IP Communication
+  │
+  ├── Data Encoding / Decoding
+  │
+  ├── Tkinter GUI
+  │
+  └── Modular Python Programming
+ Author
+
+Vivek
+
+This project was created as part of learning Python Network Programming and Socket Programming.
+
+ Support
+
+If you find this project useful for learning Python networking, consider giving the repository a ⭐ on GitHub.
+
+📄 License
+
+This project is intended for educational and learning purposes.
 
